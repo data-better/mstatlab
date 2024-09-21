@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>통계학 실험실</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 min-h-screen">
+    <header class="bg-blue-600 text-white py-6 mb-12">
+        <h1 class="text-4xl font-bold text-center">통계학 실험실</h1>
+    </header>
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl">
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-2">주사위 던지기</h2>
+                    <p class="text-gray-600 mb-4">주사위 던지기 시뮬레이션을 통해 확률 개념을 이해해보세요.</p>
+                    <a href="https://claude.site/artifacts/fd4badf6-00c7-455c-849d-7be66e6c6498" target="_blank"
+                        class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out">시뮬레이션</a>
+                </div>
+            </div>
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl">
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-2">이항분포의 포아송 분포 근사</h2>
+                    <p class="text-gray-600 mb-4">이항분포가 어떻게 포아송 분포에 근사되는지 알아보세요.</p>
+                    <a href="https://claude.site/artifacts/e76c9705-2125-4f89-a3af-9ff9c569f2e3" target="_blank"
+                        class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out">시뮬레이션</a>
+                </div>
+            </div>
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl">
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-2">이항분포의 정규분포 근사</h2>
+                    <p class="text-gray-600 mb-4">이항분포가 정규분포에 어떻게 근사되는지 시각적으로 확인해보세요.</p>
+                    <a href="https://claude.site/artifacts/7c58cac3-de8c-4b8a-b8f3-9ee156985798" target="_blank"
+                        class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out">시뮬레이션</a>
+                </div>
+            </div>
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl">
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-2">중심극한정리</h2>
+                    <p class="text-gray-600 mb-4">표본 평균의 분포가 정규분포에 수렴하는 과정을 관찰해보세요.</p>
+                    <a href="https://claude.site/artifacts/ff206c67-ebdd-455a-9e42-61deb333eb9d" target="_blank"
+                        class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out">시뮬레이션</a>
+                </div>
+            </div>
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl">
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-2">표본평균과 표본분산의 분포</h2>
+                    <p class="text-gray-600 mb-4">정규분포의 분산을 모를 때 표본평균의 분포의 특성을 시뮬레이션을 통해 이해해보세요.</p>
+                    <a href="https://claude.site/artifacts/75a2f924-d501-46cd-8970-3486075fc974" target="_blank"
+                        class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out">시뮬레이션</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                this.innerHTML = '로딩 중... ⏳';
+                this.classList.add('opacity-75', 'cursor-not-allowed');
+                setTimeout(() => {
+                    this.innerHTML = '시뮬레이션';
+                    this.classList.remove('opacity-75', 'cursor-not-allowed');
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+
+</html>
